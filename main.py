@@ -72,7 +72,7 @@ def extract_ingredient(line):
     words = line.split(" ")
     for index, word in enumerate(words):
         if len(re.findall(r'\b\d+\b', word)) > 0:
-            amount = int(round(float(word)))
+            amount = (float(word))
             line = line.replace(str(word), "")
 
 
